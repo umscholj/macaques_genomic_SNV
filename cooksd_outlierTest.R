@@ -2,6 +2,7 @@ library(ggplot2)
 library(ggrepel)
 library(Cairo)
 library(car)
+## for chromosome 1
 my_data <- read.csv("ns.chr1_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -22,7 +23,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr1.pdf", plot1, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 2
 my_data <- read.csv("ns.chr2_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -43,7 +44,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr2.pdf", plot2, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 3
 my_data <- read.csv("ns.chr3_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -64,7 +65,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr3.pdf", plot3, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 4
 my_data <- read.csv("ns.chr4_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -85,7 +86,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr4.pdf", plot4, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 5
 my_data <- read.csv("ns.chr5_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -107,7 +108,7 @@ ggsave("chr5.pdf", plot5, width = 15, height = 8)
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
 
-
+## for chromosome 6
 my_data <- read.csv("ns.chr6_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -129,7 +130,7 @@ ggsave("chr6.pdf", plot6, width = 15, height = 8)
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
 
-
+## for chromosome 7
 my_data <- read.csv("ns.chr7_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -150,7 +151,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr7.pdf", plot7, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 8
 my_data <- read.csv("ns.chr8_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -171,6 +172,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr8.pdf", plot8, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
+## for chromosome 9
 my_data <- read.csv("ns.chr9_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -191,7 +193,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr9.pdf", plot9, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 10
 my_data <- read.csv("ns.chr10_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -212,7 +214,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr10.pdf", plot10, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 11
 my_data <- read.csv("ns.chr11_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -233,7 +235,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr11.pdf", plot11, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 12
 my_data <- read.csv("ns.chr12_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -254,7 +256,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr12.pdf", plot12, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 13
 my_data <- read.csv("ns.chr13_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -275,6 +277,8 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr13.pdf", plot13, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
+
+## for chromosome 14
 my_data <- read.csv("ns.chr14_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -295,7 +299,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr14.pdf", plot14, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 15
 my_data <- read.csv("ns.chr15_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -317,7 +321,7 @@ ggsave("chr15.pdf", plot15, width = 15, height = 8)
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
 
-
+## for chromosome 16
 my_data <- read.csv("ns.chr16_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -338,7 +342,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr16.pdf", plot16, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 17
 my_data <- read.csv("ns.chr17_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -359,7 +363,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr17.pdf", plot17, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 18
 my_data <- read.csv("ns.chr18_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -380,7 +384,7 @@ scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr18.pdf", plot18, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
-
+## for chromosome 19
 my_data <- read.csv("ns.chr19_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -402,7 +406,7 @@ ggsave("chr19.pdf", plot19, width = 15, height = 8)
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
 
 
-
+## for chromosome 20
 my_data <- read.csv("ns.chr20_50k.csv", header=TRUE)
 mod <- lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data)
 cooksd <- cooks.distance(mod)
@@ -422,12 +426,4 @@ theme(legend.text = element_text(size = 12, hjust = 3, vjust = 3, face = 'bold')
 scale_colour_discrete(labels = c('Normal window','Outlier window'))
 ggsave("chr20.pdf", plot20, width = 15, height = 8) 
 outlierTest(lm(my_data$CE1+my_data$CE2+my_data$CR1+my_data$SM1+my_data$SM2+my_data$TM1+my_data$XH1+my_data$PM1~my_data$end, data=my_data))
-
-
-
-
-
-
-
-
 
